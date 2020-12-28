@@ -119,7 +119,7 @@ struct resourcerecord
 	int srvpriority;
 	int srvweight;
 	int srvport;
-	char txt[256];
+	char txt[65536]; /* large enough to store DNS TXT record, which by rfc6763 section 6.1 have an upper-limit of 65535chars */
 };
 
 
